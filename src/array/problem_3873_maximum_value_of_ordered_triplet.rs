@@ -4,8 +4,22 @@
 /// 
 #[allow(dead_code)]
 pub fn maximum_value_of_ordered_triplet(_nums: Vec<i32>) -> i64 {
-
-    return 0;
+    let mut max_value = 0;
+    let n = _nums.len();
+    for i in 0..n {
+        for j in (i + 1)..n {
+            for k in (j + 1)..n {
+                let value = (_nums[i] - _nums[j]) * _nums[k];
+                if value > max_value {
+                    max_value = value;
+                }
+            }
+        }
+    }
+    if max_value < 0 {
+        return 0;
+    }
+    max_value as i64
 }
 
 #[cfg(test)]
