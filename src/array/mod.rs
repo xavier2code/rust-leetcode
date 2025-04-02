@@ -1,0 +1,1 @@
+pub mod problem_3873_maximum_value_of_ordered_triplet;
