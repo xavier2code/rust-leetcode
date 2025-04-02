@@ -27,12 +27,12 @@ rust-leetcode
 ├── src
 │   ├── main.rs                # 项目入口文件
 │   ├── array                  # 数组相关题目模块
-│   │   ├── [problem_3873_maximum_value_of_ordered_triplet.rs](http://_vscodecontentref_/0)
+│   │   ├── [problem_3873_maximum_value_of_ordered_triplet.rs](https://github.com/xavier2code/rust-leetcode/blob/main/src/array/problem_3873_maximum_value_of_ordered_triplet.rs)
 │   │   └── mod.rs
 │   ├── string                 # 字符串相关题目模块
 │   │   └── mod.rs
 │   ├── tree                   # 树相关题目模块
 │   │   └── mod.rs
 │   └── mod.rs                 # 顶层模块声明
-├── [Cargo.toml](http://_vscodecontentref_/1)                 # Rust 项目配置文件
+├── [Cargo.toml](https://github.com/xavier2code/rust-leetcode/blob/main/Cargo.toml)                  # Rust 项目配置文件
 └── README.md                  # 项目说明文件
