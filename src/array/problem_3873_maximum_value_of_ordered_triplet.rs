@@ -2,7 +2,7 @@
 /// Return the maximum value over all triplets of indices (i, j, k) such that i < j < k. If all such triplets have a negative value, return 0.
 /// The value of a triplet of indices (i, j, k) is equal to (nums[i] - nums[j]) * nums[k].
 ///
-#[allow(dead_code)]
+#[allow(unused)]
 pub fn maximum_value_of_ordered_triplet(_nums: Vec<i32>) -> i64 {
     let mut max_value = i64::MIN; // 修复：将初始值设置为 i64::MIN
     let n = _nums.len();
