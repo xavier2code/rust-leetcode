@@ -1,5 +1,39 @@
-- name: Upload coverage reports to Codecov
-    uses: codecov/codecov-action@v5
-    with:
-      token: ${{ secrets.CODECOV_TOKEN }}
-      slug: xavier2code/rust-leetcode
+name: Test Coverage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # 安装 Rust 环境
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+
+      # 安装覆盖率工具
+      - name: Install grcov
+        run: cargo install grcov
+
+      # 运行测试并生成覆盖率数据
+      - name: Generate coverage
+        run: |
+          cargo test --verbose --all-features --workspace
+          grcov . --binary-path ./target/debug/ -s . -t lcov --branch --ignore-not-existing -o ./coverage.lcov
+
+      # 上传到 Codecov
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: rust
+          verbose: true
