@@ -1,4 +1,5 @@
-pub mod problem_3873_maximum_value_of_ordered_triplet;
 pub mod problem_2367_number_of_arithmetic_triplet;
-pub mod problem_2908_minimum_sum_of_mountain_triplets;
 pub mod problem_2874_maximum_value_of_an_orderd_triplet;
+pub mod problem_2908_minimum_sum_of_mountain_triplets;
+pub mod problem_2909_minimum_sum_of_mountain_triplets;
+pub mod problem_3873_maximum_value_of_ordered_triplet;
