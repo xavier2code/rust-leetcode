@@ -4,8 +4,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Rust Version](https://img.shields.io/badge/rust-1.70%2B-orange.svg)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
-
-
+[![codecov](https://codecov.io/gh/xavier2code/rust-leetcode/graph/badge.svg?token=7X4GKYQ3ME)](https://codecov.io/gh/xavier2code/rust-leetcode)
 ## 项目简介
 这是一个用 Rust 编程语言解决 [LeetCode](https://leetcode.com/) 算法题的项目。项目按照题目类型（如数组、字符串、树等）进行模块化管理，每个文件对应一个具体的题目解决方案。
 
